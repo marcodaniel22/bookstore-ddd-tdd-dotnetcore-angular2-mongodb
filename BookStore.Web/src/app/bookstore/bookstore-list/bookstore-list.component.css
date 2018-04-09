@@ -1,0 +1,7 @@
+th,td {
+    text-align: center;
+}
+
+td:first-child {
+    text-align: left !important;
+}

@@ -1,0 +1,33 @@
+<section>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">Edition</th>
+            <th scope="col">Publisher</th>
+            <th scope="col">Publication year</th>
+            <th scope="col">Price R$</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of bookList">
+            <td scope="col" [innerHtml]="book.title"></td>
+            <td scope="col" [innerHtml]="book.author"></td>
+            <td scope="col" [innerHtml]="book.edition"></td>
+            <td scope="col" [innerHtml]="book.publisher"></td>
+            <td scope="col" [innerHtml]="book.yearPublication"></td>
+            <td scope="col" [innerHtml]="book.price | number : '1.2-2'"></td>
+            <td scope="col">
+              <button class="btn" (click)="edit(book)">Edit</button>
+              <button class="btn btn-danger" (click)="delete(book)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

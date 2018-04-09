@@ -1,0 +1,17 @@
+.footer {
+    padding: 20px 50px 20px 50px;
+    margin-bottom: 50px;
+}
+
+.footer> .btn {
+    width: 20% !important;
+    float: right
+}
+
+.row> .col-sm-12 {
+    padding: 10px 50px 10px 50px;
+}
+
+.row> .col-sm-12 > label {
+    font-weight: bold;
+}

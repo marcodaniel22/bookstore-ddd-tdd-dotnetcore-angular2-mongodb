@@ -1,0 +1,14 @@
+<div class="tab-block">
+  <div class="tab-option tab-left" [ngClass]="{ 'tab-active': onList }" (click)="changeTab(0)">Books</div>
+  <div class="tab-option tab-right" [ngClass]="{ 'tab-active': onCreate || onEdit }" (click)="changeTab(!onEdit ? 1 : 2)" [innerHtml]="!onEdit ? 'New Book' : 'Edit Book'"></div>
+</div>
+
+<section *ngIf="onList">
+  <app-bookstore-list></app-bookstore-list>
+</section>
+<section *ngIf="onCreate">
+  <app-bookstore-create></app-bookstore-create>
+</section>
+<section *ngIf="onEdit">
+  <app-bookstore-edit *ngIf="bookEdit" [bookModel]="bookEdit"></app-bookstore-edit>
+</section>

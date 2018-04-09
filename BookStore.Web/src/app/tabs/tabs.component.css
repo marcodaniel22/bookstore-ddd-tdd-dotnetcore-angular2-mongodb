@@ -1,0 +1,33 @@
+.tab-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.tab-option {
+    border: 1px solid;
+    padding: 5px;
+    font-weight: bold;
+    color: black;
+    background-color: lightgrey;
+    text-align: center;
+    width: 20%;
+}
+
+.tab-option:hover {
+    background-color: darkgrey;
+    cursor: pointer;
+}
+
+.tab-left {
+    border-radius: 10px 0 0 10px;
+}
+
+.tab-right {
+    border-radius: 0 10px 10px 0;
+}
+
+.tab-active {
+    background-color: #6d6d6d;
+}
